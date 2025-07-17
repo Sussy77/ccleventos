@@ -1,0 +1,12 @@
+.theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #002a49; /* Default light mode color */
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .theme-toggle-button {
+  color: #ffc325; /* Dark mode color */
+}
