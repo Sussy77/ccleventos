@@ -5,11 +5,12 @@
   import { EventService } from '../../services/event.service';
   import { FormsModule } from '@angular/forms';
   import { CommonModule } from '@angular/common';
+  // import { NgxSlickCarouselModule } from 'ngx-slick-carousel';
 
   @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [SlickCarouselModule, FormsModule, CommonModule,],
+    imports: [SlickCarouselModule, FormsModule, CommonModule,NgxSlickCarouselModule],
     
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
