@@ -1,55 +1,89 @@
 <header>
-    <div class="container-fluid">
-        <div class="d-xl-block d-none">
-            <nav class="navbar navbar-expand-xl p-0">
-                <a class="navbar-brand dark-logo d-xl-none" href="/"><img alt="" src="assets/images/logo.webp"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar">
-                    <div class="col-xl-2 text-left xl-logo">
-                        <a class="navbar-brand m-0 p-0" href="/"><img alt="" src="assets/images/logo.webp"></a>
-                    </div>
-                    <div class="col-xl-4 text-end">
-                        <div class="input-box open">
-                            <span _ngcontent-ng-c2304448394="" class="input-group-text bg-white m-0 border-0"><i _ngcontent-ng-c2304448394="" class="fa fa-search"></i>
-                                <input type="text" id="busqueda-producto" placeholder="Buscar eventos" autocomplete="off" [(ngModel)]="searchTerm" (keyup)="onSearchChange()" (focus)="onFocus()" (blur)="onBlur()">
-                            </span>
-                            <div id="resultados-productos" class="bg-white" *ngIf="showResults && searchResults.length > 0">
-                                <div class="resultado-item" *ngFor="let result of searchResults">
-                                    <!-- <a [routerLink]="&#39;/eventos/&#39; + result.eventoId">
-                                        <strong>{{ result.descripcionTipodeevento | uppercase }}</strong>
-                                    </a> -->
-                                </div>
-                            </div>
-                            <div id="resultados-productos" class="bg-white" *ngIf="showResults && searchResults.length === 0 && searchTerm.trim() !== &#39;&#39;">
-                                <div class="resultado-item">
-                                    No se encontraron resultados.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 d-flex">
-                                <ul class="navbar-nav mainmenu  justify-content-start  m-0">
-                                    <li class="menu-item-has-children">
-                                        <a href="/eventos-ferias">Eventos y Ferias</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="/capacitaciones">Capacitaciones</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="/servicios">Servicios</a>
-                                    </li>
-                                </ul>
-                                <div class="justify-content-end d-flex align-items-center">
-                                    <app-theme-toggle></app-theme-toggle>
-                                    <a class="btn bg-orange" href="/todos-los-eventos">TODOS LOS EVENTOS</a>
-                                </div>
-                            </div>
+  <div class="container-fluid">
+    <div class="d-xl-block d-none">
+      <nav class="navbar navbar-expand-xl p-0">
+        <a class="navbar-brand dark-logo d-xl-none" href="/"
+          ><img alt="" src="assets/images/logo.webp"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <div class="col-xl-2 text-left xl-logo">
+            <a class="navbar-brand m-0 p-0" href="/"
+              ><img alt="" src="assets/images/logo.webp"
+            /></a>
+          </div>
+          <div class="col-xl-4 text-end">
+            <div class="input-box open">
+              <span
+                _ngcontent-ng-c2304448394=""
+                class="input-group-text bg-white m-0 border-0"
+                ><i _ngcontent-ng-c2304448394="" class="fa fa-search"></i>
+                <input
+                  type="text"
+                  id="busqueda-producto"
+                  placeholder="Buscar eventos"
+                  autocomplete="off"
+                  [(ngModel)]="searchTerm"
+                  (keyup)="onSearchChange()"
+                  (focus)="onFocus()"
+                  (blur)="onBlur()"
+                />
+              </span>
+              <div
+                id="resultados-productos"
+                class="bg-white"
+                *ngIf="showResults && searchResults.length > 0"
+              >
+                <div
+                  class="resultado-item"
+                  *ngFor="let result of searchResults"
+                >
+                  <a [routerLink]="&#39;/eventos/&#39; + result.eventoId">
+                    <strong>{{
+                      result.descripcionTipodeevento | uppercase
+                    }}</strong>
+                  </a>
                 </div>
-            </nav>
+              </div>
+              <div
+                id="resultados-productos"
+                class="bg-white"
+                *ngIf="showResults && searchResults.length === 0 && searchTerm.trim() !== &#39;&#39;"
+              >
+                <div class="resultado-item">No se encontraron resultados.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 d-flex">
+            <ul class="navbar-nav mainmenu justify-content-start m-0">
+              <li class="menu-item-has-children">
+                <a href="/eventos-ferias">Eventos y Ferias</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="/capacitaciones">Capacitaciones</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="/servicios">Servicios</a>
+              </li>
+            </ul>
+            <div class="justify-content-end d-flex align-items-center">
+              <app-theme-toggle></app-theme-toggle>
+              <a class="btn bg-orange" href="/todos-los-eventos"
+                >TODOS LOS EVENTOS</a
+              >
+            </div>
+          </div>
         </div>
+      </nav>
     </div>
+  </div>
 </header>
 <!-- <header class="st-2">
     <div class="container-fluid">

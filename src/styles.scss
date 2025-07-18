@@ -1304,6 +1304,27 @@ header nav .navbar-nav .menu-item-has-children a {
   font-weight: 700;
 }
 
+.btn-inscribete {
+  padding: 10px 24px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+#busqueda-producto {
+  border: transparent 1px solid !important;
+  padding: 4px;
+  width: 100%;
+}
+#busqueda-producto:focus {
+  border: transparent 1px solid !important;
+  outline: none;
+  padding: 4px;
+}
+
+input:focus {
+  border: transparent 1px solid !important;
+}
+
 // sección quieres ser asociado
 .inscribete {
   position: relative;
@@ -1332,11 +1353,7 @@ header nav .navbar-nav .menu-item-has-children a {
   font-weight: 400;
   padding-top: 12px;
 }
-.btn-inscribete {
-  padding: 10px 24px;
-  font-size: 18px;
-  letter-spacing: 2px;
-}
+
 .color-yellow {
   color: #ffc325;
 }
