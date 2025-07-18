@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { UserSubscriptionComponent } from '../../components/user-subscription/user-subscription.component';
 import { UserAssociatedComponent } from '../../components/user-associated/user-associated.component';
-//import { NgxSlickCarouselModule } from 'ngx-slick-carousel';
+import { CarouselRowsComponent } from '../../carousel-rows/carousel-rows.component';
 
 @Component({
   selector: 'app-home',
@@ -21,84 +21,22 @@ import { UserAssociatedComponent } from '../../components/user-associated/user-a
     HeroComponent,
     UserSubscriptionComponent,
     UserAssociatedComponent,
+    CarouselRowsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-  events: any[] = []; // Array to store fetched events
-
   defaultImageUrl: string = 'default.webp';
   // defaultImageUrl: string ='assets/images/default.webp';
 
-  slideConfig = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
-
-  eventosConfig = {
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: true,
-    dots: false,
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  constructor(
-    private newsletterService: NewsletterService,
-    private eventService: EventService
-  ) {}
+  constructor() {}
 
   // ------------------------------------------------------------------------------------------
   // @ LifeCycle Hooks
   // ------------------------------------------------------------------------------------------
 
-  ngOnInit(): void {
-    let events$ = this.eventService.getAllEventos();
-    events$.subscribe((response) => {
-      this.events = response;
-
-      // next: (data) => {
-      //   this.events = data;
-      //   console.log(data);
-      // },
-      // error: (err) => {
-      //   console.error('Error fetching events:', err);
-      // },
-      // complete:()=>{
-      //   console.log('suscription complit');
-      // }
-    });
-  }
+  ngOnInit(): void {}
 
   // ------------------------------------------------------------------------------------------
   // @ Public Methods
