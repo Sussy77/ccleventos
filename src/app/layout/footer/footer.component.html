@@ -130,57 +130,14 @@
         <div class="footer__section footer__section--social">
           <p>Síguenos</p>
           <ul>
-            <li>
-              <a
-                target="_blank"
-                href="https://web.facebook.com/CamaradeLima?_rdc=1&amp;_rdr#"
-                aria-label="Facebook"
-                ><i class="fab fa-facebook-f" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://x.com/camaradelima"
-                aria-label="Instagram"
-                ><i class="fab fa-instagram" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://www.youtube.com/user/CamaraComercioLima"
-                aria-label="YouTube"
-                ><i class="fab fa-youtube" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://www.instagram.com/camaracomerciolima/"
-                aria-label="TikTok"
-                ><img
-                  style="background: #000; border-radius: 12px"
-                  src="assets/images/tiktok.svg"
-              /></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://x.com/camaradelima/"
-                aria-label="X"
-                ><img
-                  style="background: #000; border-radius: 12px"
-                  src="assets/images/ex.svg"
-              /></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/authwall?trk=bf&amp;trkInfo=AQFooARdMry97wAAAZd5E0sIdDivFKklre4SEQO_GpRtOTZa-Gw2u_KYF8c3u9E0S19A53p_HuQpBJX0Nri1tB60Vj4_Y_P-YKbw7jcHMOqSts9XrqWfDZpzNZR6rNNHVIp7HTU=&amp;original_referer=&amp;sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fcamaradelima"
-                aria-label="LinkedIn"
-                ><i class="fab fa-linkedin-in" aria-hidden="true"></i
-              ></a>
+            <li *ngFor="let link of links">
+              <footer-link
+                [label]="link.label"
+                [link]="link.link"
+                [className]="link.className"
+              >
+                {{ link.child }}
+              </footer-link>
             </li>
           </ul>
         </div>

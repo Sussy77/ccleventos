@@ -1,42 +1,68 @@
 <article class="card-ccl" *ngIf="event">
-    <div class="card-ccl__imagen">
-        <a [routerLink]="&#39;/eventos/&#39; + event.eventoId">
-            <img [src]="event.banner || &#39;assets/images/default.webp&#39;" [alt]="event.descripcionTipodeevento">
-        </a>
+  <div class="card-ccl__imagen">
+    <a [routerLink]="&#39;/eventos/&#39; + event.eventoId">
+      <img
+        [src]="event?.banner || 'default.webp'"
+        [alt]="event.descripcionTipodeevento"
+      />
+    </a>
+  </div>
+  <div class="card-ccl__info">
+    <h3>
+      <a [routerLink]="&#39;/eventos/&#39; + event.eventoId">
+        {{ event.descripcionTipodeevento }}
+      </a>
+    </h3>
+    <div class="card-ccl__fechas">
+      <div class="card-ccl__fecha">
+        <span>Fecha de inicio:</span>
+        <div class="card-ccl__fecha-date">
+          <time>{{ formatDate(event.horarioinicio) }}</time>
+          {{ formatTime(event.horarioinicio) }}
+        </div>
+      </div>
+      <div class="card-ccl__fecha">
+        <span>Fecha de fin:</span>
+        <div class="card-ccl__fecha-date">
+          <time>{{ formatDate(event.horarioFin) }}</time>
+          {{ formatTime(event.horarioFin) }}
+        </div>
+      </div>
     </div>
-    <div class="card-ccl__info">
-        <h3>
-            <a [routerLink]="&#39;/eventos/&#39; + event.eventoId">
-                {{ event.descripcionTipodeevento }}
-            </a>
-        </h3>
-        <div class="card-ccl__fechas">
-            <div class="card-ccl__fecha">
-                <span>Fecha de inicio:</span>
-                <div class="card-ccl__fecha-date">
-                    <time>{{ formatDate(event.horarioinicio) }}</time>
-                    {{ formatTime(event.horarioinicio) }}
-                </div>
-            </div>
-            <div class="card-ccl__fecha">
-                <span>Fecha de fin:</span>
-                <div class="card-ccl__fecha-date">
-                    <time>{{ formatDate(event.horarioFin) }}</time>
-                    {{ formatTime(event.horarioFin) }}
-                </div>
-            </div>
-        </div>
-        <div class="card-ccl__lugar">
-            <span>Lugar del evento:</span>
-            <p>{{ event.lugardeevento }}</p>
-        </div>
-        <div class="card-ccl__botones">
-            <a class="card-ccl__boton-costo">{{ event.precionosocios > 0 ? &#39;EVENTO CON COSTO&#39; : &#39;EVENTO SIN COSTO&#39; }}</a>
-            <a [routerLink]="&#39;/eventos/&#39; + event.eventoId" class="card-ccl__boton-mas-info">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_2" data-name="Capa 2" viewBox="0 0 7.78 7.78"><defs><style>.cls-1 {fill: #002a49;}</style></defs>
-                <g id="Capa_8" data-name="Capa 8"><path class="cls-1" d="M3.89,0C1.74,0,0,1.74,0,3.89s1.74,3.89,3.89,3.89,3.89-1.74,3.89-3.89c0-2.15-1.74-3.89-3.89-3.89ZM3.89,7.18c-1.82,0-3.29-1.47-3.29-3.29S2.07.6,3.89.6s3.29,1.47,3.29,3.29c0,1.82-1.48,3.29-3.29,3.29ZM4.49,5.69c0,.17-.13.3-.3.3-.33,0-.6-.27-.6-.6v-1.5c-.17,0-.3-.13-.3-.3s.13-.3.3-.3c.33,0,.6.27.6.6v1.5c.17,0,.3.13.3.3ZM3.29,2.24c0-.25.2-.45.45-.45s.45.2.45.45-.2.45-.45.45-.45-.2-.45-.45Z"></path></g>
-                </svg>Más información
-            </a>
-        </div>
+    <div class="card-ccl__lugar">
+      <span>Lugar del evento:</span>
+      <p>{{ event.lugardeevento }}</p>
     </div>
+    <div class="card-ccl__botones">
+      <a
+        class="card-ccl__boton-costo"
+        >{{ event.precionosocios > 0 ? &#39;EVENTO CON COSTO&#39; : &#39;EVENTO SIN COSTO&#39; }}</a
+      >
+      <a
+        [routerLink]="&#39;/eventos/&#39; + event.eventoId"
+        class="card-ccl__boton-mas-info"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="Capa_2"
+          data-name="Capa 2"
+          viewBox="0 0 7.78 7.78"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #002a49;
+              }
+            </style>
+          </defs>
+          <g id="Capa_8" data-name="Capa 8">
+            <path
+              class="cls-1"
+              d="M3.89,0C1.74,0,0,1.74,0,3.89s1.74,3.89,3.89,3.89,3.89-1.74,3.89-3.89c0-2.15-1.74-3.89-3.89-3.89ZM3.89,7.18c-1.82,0-3.29-1.47-3.29-3.29S2.07.6,3.89.6s3.29,1.47,3.29,3.29c0,1.82-1.48,3.29-3.29,3.29ZM4.49,5.69c0,.17-.13.3-.3.3-.33,0-.6-.27-.6-.6v-1.5c-.17,0-.3-.13-.3-.3s.13-.3.3-.3c.33,0,.6.27.6.6v1.5c.17,0,.3.13.3.3ZM3.29,2.24c0-.25.2-.45.45-.45s.45.2.45.45-.2.45-.45.45-.45-.2-.45-.45Z"
+            ></path>
+          </g></svg
+        >Más información
+      </a>
+    </div>
+  </div>
 </article>
