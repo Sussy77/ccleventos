@@ -20,54 +20,7 @@
             /></a>
           </div>
           <div class="col-xl-4 text-end">
-            <div class="input-box open">
-              <span
-                _ngcontent-ng-c2304448394=""
-                class="input-group-text bg-white m-0 border-0"
-                ><i _ngcontent-ng-c2304448394="" class="fa fa-search"></i>
-                <input
-                  type="text"
-                  id="busqueda-producto"
-                  placeholder="Buscar eventos"
-                  autocomplete="off"
-                  [(ngModel)]="searchTerm"
-                  (keyup)="onSearchChange()"
-                  (focus)="onFocus()"
-                  (blur)="onBlur()"
-                />
-              </span>
-              <div
-                id="resultados-productos"
-                class="bg-white"
-                [ngClass]="{
-                  'resultados-productos-hidden': !showResults,
-                  'resultados-productos-visible': showResults
-                }"
-                *ngIf="showResults"
-              >
-                <div
-                  class="resultado-item"
-                  *ngFor="let result of searchResults"
-                >
-                  <a [routerLink]="&#39;/eventos/&#39; + result.eventoId">
-                    <strong>{{
-                      result.descripcionTipodeevento | uppercase
-                    }}</strong>
-                  </a>
-                </div>
-              </div>
-              <div
-                id="resultados-productos"
-                class="bg-white"
-                [ngClass]="{
-                  'resultados-productos-hidden': !showResults,
-                  'resultados-productos-visible': showResults
-                }"
-                *ngIf="showResults"
-              >
-                <div class="resultado-item">No se encontraron resultados.</div>
-              </div>
-            </div>
+            <app-search-bar></app-search-bar>
           </div>
           <div class="col-xl-6 d-flex">
             <ul class="navbar-nav mainmenu justify-content-start m-0">

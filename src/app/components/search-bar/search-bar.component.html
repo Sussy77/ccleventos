@@ -1,0 +1,40 @@
+<div class="input-box open navbar__search-input-container">
+  <span class="input-group-text bg-white m-0 border-0"
+    ><i class="fa fa-search"></i>
+    <input
+      class="navbar__search-input"
+      type="text"
+      id="busqueda-producto"
+      placeholder="Buscar eventos"
+      autocomplete="off"
+      formControl="searchControl"
+      (keyup)="onSearchChange()"
+      (focus)="onFocus()"
+      (blur)="onBlur()"
+    />
+  </span>
+  <div
+    id="resultados-productos"
+    class="bg-white"
+    [ngClass]="{
+      'resultados-productos-hidden': !showResults,
+      'resultados-productos-visible': showResults
+    }"
+  >
+    <div class="resultado-item" *ngFor="let result of searchResults">
+      <a [routerLink]="&#39;/eventos/&#39; + result.eventoId">
+        <strong>{{ result.descripcionTipodeevento | uppercase }}</strong>
+      </a>
+    </div>
+  </div>
+  <div
+    id="resultados-productos"
+    class="bg-white"
+    [ngClass]="{
+      'resultados-productos-hidden': !showResults,
+      'resultados-productos-visible': showResults
+    }"
+  >
+    <div class="resultado-item">No se encontraron resultados.</div>
+  </div>
+</div>
