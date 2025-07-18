@@ -6,6 +6,8 @@ import { EventService } from '../../services/event.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from '../../components/hero/hero.component';
+import { UserSubscriptionComponent } from '../../components/user-subscription/user-subscription.component';
+import { UserAssociatedComponent } from '../../components/user-associated/user-associated.component';
 //import { NgxSlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
@@ -17,14 +19,15 @@ import { HeroComponent } from '../../components/hero/hero.component';
     CommonModule,
     EventCardComponent,
     HeroComponent,
+    UserSubscriptionComponent,
+    UserAssociatedComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
   events: any[] = []; // Array to store fetched events
-  newsletterEmail: string = '';
-  subscriptionMessage: string = '';
+
   defaultImageUrl: string = 'default.webp';
   // defaultImageUrl: string ='assets/images/default.webp';
 
@@ -100,24 +103,4 @@ export class HomeComponent implements OnInit {
   // ------------------------------------------------------------------------------------------
   // @ Public Methods
   // ------------------------------------------------------------------------------------------
-
-  subscribeToNewsletter(): void {
-    if (this.newsletterEmail.trim() === '') {
-      this.subscriptionMessage = 'Por favor, ingresa tu correo electrónico.';
-
-      return;
-    }
-
-    this.newsletterService.subscribe(this.newsletterEmail).subscribe({
-      next: (response) => {
-        this.subscriptionMessage = response.message || '¡Suscripción exitosa!';
-        this.newsletterEmail = ''; // Clear the input
-      },
-      error: (err) => {
-        this.subscriptionMessage =
-          err.error?.message || 'Error al suscribirse. Inténtalo de nuevo.';
-        console.error('Error subscribing to newsletter:', err);
-      },
-    });
-  }
 }

@@ -80,63 +80,7 @@
     </div>
   </section>
 
-  <section class="newsletter py-5 m-80">
-    <div class="container-fluid py-xl-5">
-      <div class="row align-items-center mb-xl-5 pb-xl-5">
-        <div class="col-12 col-xl-6 newsletter__left mb-4 mb-xl-0">
-          <h2 class="mb-3">Mantente al día</h2>
-          <h3 class="mb-4 pb-xl-2">
-            Descubre las últimas novedades en servicios,<br />
-            capacitaciones y eventos de la CCL.
-          </h3>
-          <p>Regístrate para recibir la agenda</p>
-        </div>
-        <div class="col-12 col-xl-6 newsletter__right">
-          <form (ngSubmit)="subscribeToNewsletter()">
-            <p>
-              <span class="wpcf7-form-control-wrap" data-name="your-email">
-                <input
-                  type="email"
-                  placeholder="Ingresa tu correo"
-                  [(ngModel)]="newsletterEmail"
-                  name="newsletterEmail"
-                  required
-                />
-              </span>
-              <input
-                class="wpcf7-form-control wpcf7-submit has-spinner"
-                type="submit"
-                value="Subscribirse"
-              />
-            </p>
-            <div *ngIf="subscriptionMessage" class="subscription-message">
-              {{ subscriptionMessage }}
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+  <app-user-subscription></app-user-subscription>
 
-  <section class="inscribete">
-    <div class="inscribete-header bg-blue">
-      <img src="assets/images/ico-inscribete.jpg" alt="inscribete" />
-      <p>
-        Si eres
-        <span class="color-yellow weight-700">asociado CCL,</span> disfruta de
-        eventos y capacitaciones <span class="weight-700">exclusivas</span> con
-        un súper <span class="weight-700">descuento.</span>
-      </p>
-    </div>
-    <div class="container-fluid inscribirse-content" id="">
-      <h1 class="color-white mb-4">SI QUIERES SER ASOCIADO DE LA CCL</h1>
-      <a
-        class="btn bg-orange btn-inscribete"
-        href="https://afiliaciones.camaralima.org.pe/afiliacion/"
-        target="_blank"
-        name="inscribete-aqui"
-        >INSCRÍBETE AQUÍ
-      </a>
-    </div>
-  </section>
+  <app-user-associated></app-user-associated>
 </main>
