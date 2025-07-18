@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsletterService } from '../../services/newsletter.service';
 import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-user-subscription',
-  imports: [FormsModule, UserSubscriptionComponent],
+  imports: [FormsModule, UserSubscriptionComponent, NgIf],
   templateUrl: './user-subscription.component.html',
   styleUrl: './user-subscription.component.scss',
 })

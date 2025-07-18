@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { EventService } from '../services/event.service';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { EventCardComponent } from '../components/event-card/event-card.component';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-carousel-rows',
-  imports: [],
+  imports: [SlickCarouselModule, EventCardComponent, NgIf, NgFor],
   templateUrl: './carousel-rows.component.html',
   styleUrl: './carousel-rows.component.scss',
 })

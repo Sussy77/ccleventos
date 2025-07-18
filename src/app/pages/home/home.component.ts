@@ -12,10 +12,8 @@ import { CarouselRowsComponent } from '../../carousel-rows/carousel-rows.compone
   selector: 'app-home',
   standalone: true,
   imports: [
-    SlickCarouselModule,
     FormsModule,
     CommonModule,
-    EventCardComponent,
     HeroComponent,
     UserSubscriptionComponent,
     UserAssociatedComponent,

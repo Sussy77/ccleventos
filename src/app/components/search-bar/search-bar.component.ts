@@ -8,12 +8,12 @@ import {
   filter,
 } from 'rxjs';
 import { EventService } from '../../services/event.service';
-import { NgClass, UpperCasePipe } from '@angular/common';
+import { NgClass, NgFor, UpperCasePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-search-bar',
-  imports: [NgClass, RouterLink, UpperCasePipe],
+  imports: [NgClass, RouterLink, UpperCasePipe, NgFor],
   templateUrl: './search-bar.component.html',
   styleUrl: './search-bar.component.scss',
 })
