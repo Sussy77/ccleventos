@@ -5,20 +5,23 @@
   import { EventService } from '../../services/event.service';
   import { FormsModule } from '@angular/forms';
   import { CommonModule } from '@angular/common';
-  // import { NgxSlickCarouselModule } from 'ngx-slick-carousel';
+  //import { NgxSlickCarouselModule } from 'ngx-slick-carousel';
+
 
   @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [SlickCarouselModule, FormsModule, CommonModule,NgxSlickCarouselModule],
-    
+    imports: [SlickCarouselModule, FormsModule, CommonModule,EventCardComponent],    
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
   })
   export class HomeComponent implements OnInit {
+    
     events: any[] = []; // Array to store fetched events
     newsletterEmail: string = '';
     subscriptionMessage: string = '';
+    defaultImageUrl: string ='default.webp';
+    // defaultImageUrl: string ='assets/images/default.webp';
 
     slideConfig = {
       "slidesToShow": 1,
@@ -65,15 +68,24 @@
     constructor(private newsletterService: NewsletterService, private eventService: EventService) { }
 
     ngOnInit(): void {
-      this.eventService.getAllEventos().subscribe({
-        next: (data) => {
-          this.events = data;
-          console.log(data);
-        },
-        error: (err) => {
-          console.error('Error fetching events:', err);
-        }
+       let events$ = this.eventService.getAllEventos();
+       events$.subscribe((response)=>{
+         this.events = response;   
+
+        // next: (data) => {
+        //   this.events = data;
+        //   console.log(data);
+        // },
+        // error: (err) => {
+        //   console.error('Error fetching events:', err);
+        // },
+        // complete:()=>{
+        //   console.log('suscription complit');
+        // }
+        
       });
+
+
     }
 
     subscribeToNewsletter(): void {

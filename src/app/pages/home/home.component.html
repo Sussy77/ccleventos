@@ -1,140 +1,189 @@
 <main>
-    <!-- Hero Area start -->
-    <section class="hero-banner-slider-data">
-        <!-- <ngx-slick-carousel class="carousel" #slickModal="slickCarousel" [config]="slideConfig">
-            <div ngxSlickItem class="item block-1" style="background: url(&#39;assets/images/bg-header_11zon.webp&#39;) center center / cover no-repeat;">
-                <div class="container-fluid">
-                    <div class="content">
-                        <div class="row align-items-end">
-                            <div class="col-lg-6 col-md-7 col-sm-9 mb-lg-0">
-                                <div class="btn-banner ml-sm-12">
-                                    <a href="#" class="cus-btn filled"><i class="fal fa-info-circle"></i> Más Información</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div ngxSlickItem class="item block-2" style="background: url(&#39;assets/images/bg-capacitaciones_11zon.webp&#39;) center center / cover no-repeat;">
-                <div class="container-fluid">
-                    <div class="content">
-                        <div class="row align-items-end">
-                            <div class="col-lg-6 col-md-7 col-sm-9 mb-lg-0">
-                                <div class="btn-banner ml-sm-12">
-                                    <a href="#" class="cus-btn filled"><i class="fal fa-info-circle"></i> Más Información</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </ngx-slick-carousel> -->
-    </section>
-    <!-- Hero Area end -->
-
-    <section class="eventos_slider pt-3 pt-xl-3 mt-xl-3">
+  <!-- Hero Area start -->
+  <section class="hero-banner-slider-data">
+   
+    <ngx-slick-carousel class="carousel" [config]="slideConfig">
+      <div
+        ngxSlickItem
+        class="item block-1"
+        style="background: url(assets/images/slider-evento.webp) center center / cover no-repeat;"
+      >
         <div class="container-fluid">
-            <div class="eventos_slider__title mb-3 mb-xl-4 pb-xl-3">
-                <h3 class="title-section">Eventos y Ferias</h3>
-                <div class="eventos_slider__right">
-                    <a href="/eventos-ferias">VER TODOS</a>
+          <div class="content">
+            <div class="row align-items-end">
+              <div class="col-lg-6 col-md-7 col-sm-9 mb-lg-0">
+                <div class="btn-banner ml-sm-12">
+                  <a href="#" class="cus-btn filled"
+                    ><i class="fal fa-info-circle"></i> Más Información</a
+                  >
                 </div>
+              </div>
             </div>
-            
-            <!-- <ngx-slick-carousel class="carousel" #slickModal="slickCarousel" [config]="eventosConfig">
-                <div ngxSlickItem *ngFor="let event of events" class="slide">
-                    <app-event-card [event]="event"></app-event-card>
-                </div>
-            </ngx-slick-carousel> -->
+          </div>
         </div>
-    </section>
-
-    <section class="eventos_slider pt-3 pt-xl-5 mt-xl-3">
+      </div>
+      <div
+        ngxSlickItem
+        class="item block-2"
+        style="
+          background: url(assets/images/bg-capacitaciones_11zon.webp)
+            center center / cover no-repeat;
+        "
+      >
         <div class="container-fluid">
-            <div class="eventos_slider__title mb-3 mb-xl-4 pb-xl-3">
-                <h3 class="title-section">Capacitación</h3>
-                <div class="eventos_slider__right">
-                    <a href="/capacitaciones">VER TODOS</a>
+          <div class="content">
+            <div class="row align-items-end">
+              <div class="col-lg-6 col-md-7 col-sm-9 mb-lg-0">
+                <div class="btn-banner ml-sm-12">
+                  <a href="#" class="cus-btn filled"
+                    ><i class="fal fa-info-circle"></i> Más Información</a
+                  >
                 </div>
+              </div>
             </div>
-            <!-- <ngx-slick-carousel class="carousel" #slickModal="slickCarousel" [config]="eventosConfig">
-                <div ngxSlickItem *ngFor="let event of events" class="slide">
-                    <app-event-card [event]="event"></app-event-card>
-                </div>
-            </ngx-slick-carousel> -->
+          </div>
         </div>
-    </section>
+      </div>
+    </ngx-slick-carousel>
+  </section>
+  <!-- Hero Area end -->
 
-    <section class="eventos_slider pt-3 pt-xl-5 mt-xl-3">
-        <div class="container-fluid">
-            <div class="eventos_slider__title mb-3 mb-xl-4 pb-xl-3">
-                <h3 class="title-section">Servicios</h3>
-                <div class="eventos_slider__right">
-                    <a href="/servicios">VER TODOS</a>
-                </div>
+  <section class="eventos_slider pt-3 pt-xl-3 mt-xl-3">
+    <div class="container-fluid">
+      <div class="eventos_slider__title mb-3 mb-xl-4 pb-xl-3">
+        <h3 class="title-section">Eventos y Ferias</h3>
+        <div class="eventos_slider__right">
+          <a href="/eventos-ferias">VER TODOS</a>
+        </div>
+      </div>
+      <ngx-slick-carousel class="carousel" [config]="eventosConfig">
+        <div ngxSlickItem *ngFor="let event of events" class="slide">
+          <app-event-card [event]="event"></app-event-card>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </section>
+
+  <section class="eventos_slider pt-3 pt-xl-5 mt-xl-3">
+    <div class="container-fluid">
+      <div class="eventos_slider__title mb-3 mb-xl-4 pb-xl-3">
+        <h3 class="title-section">Capacitación</h3>
+        <div class="eventos_slider__right">
+          <a href="/capacitaciones">VER TODOS</a>
+        </div>
+      </div>
+      <ngx-slick-carousel class="carousel" [config]="eventosConfig">
+        <div ngxSlickItem *ngFor="let event of events" class="slide">
+          <app-event-card [event]="event"></app-event-card>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </section>
+
+  <section class="eventos_slider pt-3 pt-xl-5 mt-xl-3">
+    <div class="container-fluid">
+      <div class="eventos_slider__title mb-3 mb-xl-4 pb-xl-3">
+        <h3 class="title-section">Servicios</h3>
+        <div class="eventos_slider__right">
+          <a href="/servicios">VER TODOS</a>
+        </div>
+      </div>
+      <ngx-slick-carousel class="carousel" [config]="eventosConfig">
+        <div ngxSlickItem *ngFor="let event of events" class="slide">
+          <app-event-card [event]="event"></app-event-card>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </section>
+
+  <section class="eventos_slider pt-3 pt-xl-5 mt-xl-3">
+    <div class="container-fluid">
+      <div class="eventos_slider__title mb-3 mb-xl-4 pb-xl-3">
+        <h3 class="title-section">
+          Exclusivo para <strong>Asociados</strong>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="Capa_2"
+            data-name="Capa 2"
+            viewBox="0 0 15.55 15"
+            width="28"
+          >
+            <g id="Capa_7" data-name="Capa 7">
+              <path
+                d="M15.16,6.87l-3.13,2.7.95,4.03c.15.61-.23,1.23-.84,1.37-.29.07-.6.02-.86-.14l-3.51-2.16-3.51,2.16c-.54.33-1.24.16-1.56-.38-.16-.26-.2-.56-.13-.86l.96-4.03L.4,6.87c-.48-.41-.53-1.13-.12-1.61.19-.22.47-.37.76-.39l4.1-.33,1.58-3.83c.24-.58.9-.86,1.48-.62.28.12.5.34.62.62l1.58,3.83,4.1.33c.63.05,1.1.61,1.04,1.24-.03.3-.17.57-.39.77h0Z"
+              ></path>
+            </g>
+          </svg>
+        </h3>
+        <div class="eventos_slider__right">
+          <a href="/asociados">VER TODOS</a>
+        </div>
+      </div>
+      <ngx-slick-carousel class="carousel" [config]="eventosConfig">
+        <div ngxSlickItem *ngFor="let event of events" class="slide">
+          <app-event-card [event]="event"></app-event-card>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </section>
+
+  <section class="newsletter py-5 m-80">
+    <div class="container-fluid py-xl-5">
+      <div class="row align-items-center mb-xl-5 pb-xl-5">
+        <div class="col-12 col-xl-6 newsletter__left mb-4 mb-xl-0">
+          <h2 class="mb-3">Mantente al día</h2>
+          <h3 class="mb-4 pb-xl-2">
+            Descubre las últimas novedades en servicios,<br />
+            capacitaciones y eventos de la CCL.
+          </h3>
+          <p>Regístrate para recibir la agenda</p>
+        </div>
+        <div class="col-12 col-xl-6 newsletter__right">
+          <form (ngSubmit)="subscribeToNewsletter()">
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-email">
+                <input
+                  type="email"
+                  placeholder="Ingresa tu correo"
+                  [(ngModel)]="newsletterEmail"
+                  name="newsletterEmail"
+                  required
+                />
+              </span>
+              <input
+                class="wpcf7-form-control wpcf7-submit has-spinner"
+                type="submit"
+                value="Subscribirse"
+              />
+            </p>
+            <div *ngIf="subscriptionMessage" class="subscription-message">
+              {{ subscriptionMessage }}
             </div>
-            <!-- <ngx-slick-carousel class="carousel" #slickModal="slickCarousel" [config]="eventosConfig">
-                <div ngxSlickItem *ngFor="let event of events" class="slide">
-                    <app-event-card [event]="event"></app-event-card>
-                </div>
-            </ngx-slick-carousel> -->
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="eventos_slider pt-3 pt-xl-5 mt-xl-3">
-        <div class="container-fluid">
-            <div class="eventos_slider__title mb-3 mb-xl-4 pb-xl-3">
-                <h3 class="title-section">Exclusivo para <strong>Asociados</strong>
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Capa_2" data-name="Capa 2" viewBox="0 0 15.55 15" width="28">
-                        <g id="Capa_7" data-name="Capa 7"><path d="M15.16,6.87l-3.13,2.7.95,4.03c.15.61-.23,1.23-.84,1.37-.29.07-.6.02-.86-.14l-3.51-2.16-3.51,2.16c-.54.33-1.24.16-1.56-.38-.16-.26-.2-.56-.13-.86l.96-4.03L.4,6.87c-.48-.41-.53-1.13-.12-1.61.19-.22.47-.37.76-.39l4.1-.33,1.58-3.83c.24-.58.9-.86,1.48-.62.28.12.5.34.62.62l1.58,3.83,4.1.33c.63.05,1.1.61,1.04,1.24-.03.3-.17.57-.39.77h0Z"></path></g>
-                    </svg>
-                </h3>
-                <div class="eventos_slider__right">
-                    <a href="/asociados">VER TODOS</a>
-                </div>
-            </div>
-            <!-- <ngx-slick-carousel class="carousel" #slickModal="slickCarousel" [config]="eventosConfig">
-                <div ngxSlickItem *ngFor="let event of events" class="slide">
-                    <app-event-card [event]="event"></app-event-card>
-                </div>
-            </ngx-slick-carousel> -->
-        </div>
-    </section>
-
-    <section class="newsletter py-5 m-80">
-        <div class="container-fluid py-xl-5">
-            <div class="row align-items-center mb-xl-5 pb-xl-5">
-                <div class="col-12 col-xl-6 newsletter__left mb-4 mb-xl-0">
-                    <h2 class="mb-3">Mantente al día</h2>
-                    <h3 class="mb-4 pb-xl-2">Descubre las últimas novedades en servicios,<br>
-                        capacitaciones y eventos de la CCL.</h3>
-                    <p>Regístrate para recibir la agenda</p>
-                </div>
-                <div class="col-12 col-xl-6 newsletter__right">
-                    <form (ngSubmit)="subscribeToNewsletter()">
-                        <p>
-                            <span class="wpcf7-form-control-wrap" data-name="your-email">
-                                <input type="email" placeholder="Ingresa tu correo" [(ngModel)]="newsletterEmail" name="newsletterEmail" required>
-                            </span>
-                            <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Subscribirse">
-                        </p>
-                        <div *ngIf="subscriptionMessage" class="subscription-message">
-                            {{ subscriptionMessage }}
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="inscribete">
-        <div class="inscribete-header bg-blue">
-            <img src="assets/images/ico-inscribete.jpg" alt="inscribete">
-            <p>Si eres <span class="color-yellow weight-700">asociado CCL,</span> disfruta de eventos y capacitaciones <span class="weight-700">exclusivas</span> con un súper  <span class="weight-700">descuento.</span></p>
-        </div>
-        <div class="container-fluid inscribirse-content" id="">
-            <h1 class="color-white mb-4">SI QUIERES SER ASOCIADO DE LA CCL</h1>
-            <a class="btn bg-orange btn-inscribete" href="https://afiliaciones.camaralima.org.pe/afiliacion/" target="_blank" name="inscribete-aqui">INSCRÍBETE AQUÍ </a>
-        </div>
-    </section>
+  <section class="inscribete">
+    <div class="inscribete-header bg-blue">
+      <img src="assets/images/ico-inscribete.jpg" alt="inscribete" />
+      <p>
+        Si eres
+        <span class="color-yellow weight-700">asociado CCL,</span> disfruta de
+        eventos y capacitaciones <span class="weight-700">exclusivas</span> con
+        un súper <span class="weight-700">descuento.</span>
+      </p>
+    </div>
+    <div class="container-fluid inscribirse-content" id="">
+      <h1 class="color-white mb-4">SI QUIERES SER ASOCIADO DE LA CCL</h1>
+      <a
+        class="btn bg-orange btn-inscribete"
+        href="https://afiliaciones.camaralima.org.pe/afiliacion/"
+        target="_blank"
+        name="inscribete-aqui"
+        >INSCRÍBETE AQUÍ
+      </a>
+    </div>
+  </section>
 </main>

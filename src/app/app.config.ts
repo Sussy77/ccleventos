@@ -9,7 +9,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideHttpClient()],
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideHttpClient(),
+  ],
 };
-
-

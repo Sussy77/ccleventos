@@ -1,8 +1,14 @@
-<article class="card-ccl" *ngIf="event">
+<article class="card-ccl" *ngIf="event">   
     <div class="card-ccl__imagen">
-        <a [routerLink]="&#39;/eventos/&#39; + event.eventoId">
-            <img [src]="event.banner || &#39;assets/images/default.webp&#39;" [alt]="event.descripcionTipodeevento">
+        <!-- imagen destinada del evento -->
+        <a  [routerLink]="&#39;/eventos/&#39; + event.eventoId">
+            <img [src]="cardImage" [alt]="event.descripcionTipodeevento">
         </a>
+        <!-- <a *ngIf="event.banner" [routerLink]="&#39;/eventos/&#39; + event.eventoId">
+            <img [src]="event.banner" [alt]="event.descripcionTipodeevento">
+        </a> -->
+      
+       
     </div>
     <div class="card-ccl__info">
         <h3>
