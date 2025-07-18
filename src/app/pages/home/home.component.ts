@@ -75,6 +75,10 @@ export class HomeComponent implements OnInit {
     private eventService: EventService
   ) {}
 
+  // ------------------------------------------------------------------------------------------
+  // @ LifeCycle Hooks
+  // ------------------------------------------------------------------------------------------
+
   ngOnInit(): void {
     let events$ = this.eventService.getAllEventos();
     events$.subscribe((response) => {
@@ -92,6 +96,10 @@ export class HomeComponent implements OnInit {
       // }
     });
   }
+
+  // ------------------------------------------------------------------------------------------
+  // @ Public Methods
+  // ------------------------------------------------------------------------------------------
 
   subscribeToNewsletter(): void {
     if (this.newsletterEmail.trim() === '') {
