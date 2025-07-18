@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventCardComponent } from '../../components/event-card/event-card.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { NewsletterService } from '../../services/newsletter.service';
-import { EventService } from '../../services/event.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from '../../components/hero/hero.component';
