@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { EventService } from '../services/event.service';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { EventCardComponent } from '../components/event-card/event-card.component';
 import { NgFor, NgIf } from '@angular/common';
+import { EventService } from '../../services/event.service';
+import { EventCardComponent } from '../event-card/event-card.component';
 
 @Component({
   selector: 'app-carousel-rows',
@@ -62,7 +62,7 @@ export class CarouselRowsComponent {
 
   ngOnInit(): void {
     let events$ = this.eventService.getAllEventos();
-    events$.subscribe((response) => {
+    events$.subscribe((response: any) => {
       this.events = response;
 
       // next: (data) => {

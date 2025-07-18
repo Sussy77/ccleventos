@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { EventCardComponent } from '../event-card/event-card.component';
 
 @Component({
   selector: 'app-hero',
-  imports: [SlickCarouselModule, FormsModule, CommonModule, EventCardComponent],
+  imports: [SlickCarouselModule, FormsModule, CommonModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

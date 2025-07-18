@@ -5,7 +5,7 @@ import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-user-subscription',
-  imports: [FormsModule, UserSubscriptionComponent, NgIf],
+  imports: [FormsModule, NgIf],
   templateUrl: './user-subscription.component.html',
   styleUrl: './user-subscription.component.scss',
 })

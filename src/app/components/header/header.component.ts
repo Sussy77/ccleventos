@@ -1,15 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../../services/event.service';
 import { CommonModule, NgClass } from '@angular/common';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
-import {
-  debounceTime,
-  distinctUntilChanged,
-  filter,
-  Subject,
-  takeUntil,
-} from 'rxjs';
 import { RouterLink } from '@angular/router';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 
