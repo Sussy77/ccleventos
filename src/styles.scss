@@ -1044,3 +1044,16 @@ body.dark-mode .footer__section--transparency .footer__lr svg {
 .inscription-strong {
   font-weight: 700;
 }
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  font-size: 18px;
+  list-style: none;
+}
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+}
