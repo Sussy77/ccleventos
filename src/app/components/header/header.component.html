@@ -39,7 +39,11 @@
               <div
                 id="resultados-productos"
                 class="bg-white"
-                *ngIf="showResults && searchResults.length > 0"
+                [ngClass]="{
+                  'resultados-productos-hidden': !showResults,
+                  'resultados-productos-visible': showResults
+                }"
+                *ngIf="showResults"
               >
                 <div
                   class="resultado-item"
@@ -55,7 +59,11 @@
               <div
                 id="resultados-productos"
                 class="bg-white"
-                *ngIf="showResults && searchResults.length === 0 && searchTerm.trim() !== &#39;&#39;"
+                [ngClass]="{
+                  'resultados-productos-hidden': !showResults,
+                  'resultados-productos-visible': showResults
+                }"
+                *ngIf="showResults"
               >
                 <div class="resultado-item">No se encontraron resultados.</div>
               </div>

@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../../services/event.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FormsModule, ThemeToggleComponent],
+  imports: [CommonModule, FormsModule, ThemeToggleComponent, NgClass],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
   searchTerm: string = '';
   searchResults: any[] = [];
   showResults: boolean = false;
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   onSearchChange(): void {
     if (this.searchTerm.trim() === '') {
@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
         console.error('Error searching events:', err);
         this.searchResults = [];
         this.showResults = false;
-      }
+      },
     });
   }
 
@@ -48,8 +48,8 @@ export class HeaderComponent implements OnInit {
   }
 
   onFocus(): void {
+    this.showResults = true;
     if (this.searchResults.length > 0) {
-      this.showResults = true;
     }
   }
 }
