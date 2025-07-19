@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { CtaBtnComponent } from '../cta-btn/cta-btn.component';
 
 @Component({
   selector: 'app-user-associated',
-  imports: [],
+  imports: [CtaBtnComponent],
   templateUrl: './user-associated.component.html',
-  styleUrl: './user-associated.component.scss'
+  styleUrl: './user-associated.component.scss',
 })
-export class UserAssociatedComponent {
-
-}
+export class UserAssociatedComponent {}

@@ -1,0 +1,28 @@
+.cta-btn {
+  background-color: #ffc325;
+  border: transparent 1px solid;
+  border-radius: 20px;
+  color: #272727;
+  font-weight: 700;
+  text-wrap: nowrap;
+  transition: all ease-in-out 200ms;
+}
+.cta-btn:hover {
+  color: white;
+  background-color: transparent;
+  border: #ffc325 solid 1px;
+}
+.cta-btn-sm {
+  border-radius: 20px;
+  padding: 8px 32px;
+}
+.cta-btn-md {
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+.cta-btn-lg {
+  padding: 16px 48px;
+  border-radius: 30px;
+  font-size: 24px;
+}

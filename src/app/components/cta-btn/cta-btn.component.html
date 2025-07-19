@@ -1,0 +1,27 @@
+<button
+  *ngIf="!href"
+  type="button"
+  (click)="(onClick)"
+  class="cta-btn"
+  [ngClass]="{
+    'cta-btn-lg': size === 'lg',
+    'cta-btn-md': size === 'md',
+    'cta-btn-sm': size === 'sm'
+  }"
+>
+  {{ label }}
+</button>
+
+<a
+  *ngIf="href"
+  class="cta-btn"
+  [ngClass]="{
+    'cta-btn-lg': size === 'lg',
+    'cta-btn-md': size === 'md',
+    'cta-btn-sm': size === 'sm'
+  }"
+  href="href"
+  target="_blank"
+>
+  {{ label }}
+</a>

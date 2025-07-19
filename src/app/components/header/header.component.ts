@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 import { RouterLink } from '@angular/router';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { CtaBtnComponent } from '../cta-btn/cta-btn.component';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,7 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
     NgClass,
     RouterLink,
     SearchBarComponent,
+    CtaBtnComponent,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

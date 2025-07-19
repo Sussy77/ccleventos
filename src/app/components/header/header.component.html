@@ -36,9 +36,11 @@
             </ul>
             <div class="justify-content-end d-flex align-items-center">
               <app-theme-toggle></app-theme-toggle>
-              <a class="btn bg-orange" href="/todos-los-eventos"
-                >TODOS LOS EVENTOS</a
-              >
+              <app-cta-btn
+                [label]="'TODOS LOS EVENTOS'"
+                [size]="'sm'"
+                [href]="'/todos-los-eventos'"
+              ></app-cta-btn>
             </div>
           </div>
         </div>
