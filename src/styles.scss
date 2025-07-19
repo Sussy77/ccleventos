@@ -8,9 +8,15 @@
 @import "app/styles/newsletter";
 @import "app/styles/eventos-slider";
 @import "app/styles/fonts";
+@import "app/styles/subscription-dialog";
 
 * {
   font-family: Montserrat;
+}
+
+:root {
+  --primary: #002a49;
+  --accent: #ffc325;
 }
 
 img.wp-smiley,
@@ -522,14 +528,13 @@ strong {
 header {
   width: 100%;
   height: 72px;
-  background-color: #002a49;
+  background-color: var(--primary);
 }
 header nav .navbar-nav .menu-item-has-children {
   position: relative;
   margin-right: 48px;
 }
-.navbar {
-}
+
 header nav .navbar-nav .menu-item-has-children a {
   color: #f8f8ff;
   font-weight: 500;

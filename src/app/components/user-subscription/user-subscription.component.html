@@ -1,29 +1,15 @@
 <section class="newsletter">
   <div class="newsletter-container">
     <div class="newsletter__left">
-      <h2 class="">Mantente al día</h2>
-      <h3 class="">
+      <h2>Mantente al día</h2>
+      <h3>
         Descubre las últimas novedades en servicios, capacitaciones y eventos de
         la CCL.
       </h3>
       <p>Regístrate para recibir la agenda</p>
     </div>
     <div class="newsletter__right">
-      <form (ngSubmit)="subscribeToNewsletter()">
-        <div class="form-group">
-          <input
-            type="email"
-            placeholder="Ingresa tu correo"
-            [(ngModel)]="newsletterEmail"
-            name="newsletterEmail"
-            required
-          />
-          <input class="form-submit" type="submit" value="Subscribirse" />
-        </div>
-        <div *ngIf="subscriptionMessage" class="subscription-message">
-          {{ subscriptionMessage }}
-        </div>
-      </form>
+      <app-subscription-form></app-subscription-form>
     </div>
   </div>
 </section>

@@ -1,0 +1,16 @@
+.subscription-dialog-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+.subscription-dialog {
+  background-color: white;
+  width: 300px;
+  height: 250px;
+  transform: translate(50%, 50%);
+  border-radius: 8px;
+}

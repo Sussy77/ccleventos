@@ -1,0 +1,15 @@
+<form (ngSubmit)="subscribeToNewsletter()">
+  <div class="form-group">
+    <input
+      type="email"
+      placeholder="Ingresa tu correo"
+      [(ngModel)]="newsletterEmail"
+      name="newsletterEmail"
+      required
+    />
+    <input class="form-submit" type="submit" value="Subscribirse" />
+  </div>
+  <div *ngIf="subscriptionMessage" class="subscription-message">
+    {{ subscriptionMessage }}
+  </div>
+</form>
