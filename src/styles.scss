@@ -490,9 +490,19 @@ header nav .navbar-nav .menu-item-has-children a {
     font-size: 14px;
     font-weight: 700;
 }
+.bg-blue {
+    background-color: #002a47;
+}
+.cus-btn.filled {
+    padding: 5px 12px;
+    background: #ffc325;
+    color: #012a48;
+    border-radius: 6px;
+}
 // sección quieres ser asociado
 .inscribete {
     background-color: #1c5b91;
+    position: relative;
 }
 .inscribete-header {
     display: flex;
