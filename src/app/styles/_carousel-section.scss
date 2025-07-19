@@ -1,8 +1,10 @@
 .carousel-section {
   min-height: 80vh;
-  max-width: 100%;
+  margin: auto;
+  max-width: 95%;
   border-bottom: dashed 1px rgba(128, 128, 128, 0.237);
   padding: 60px 100px 20px 100px;
+  //   box-shadow: 1px 3px 14px rgba(128, 128, 128, 0.237);
 }
 
 .carousel-section__header {
