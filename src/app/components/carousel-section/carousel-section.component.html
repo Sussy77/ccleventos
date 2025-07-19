@@ -1,0 +1,29 @@
+<section class="carousel-section">
+  <div class="carousel-section__container">
+    <!-- Header -->
+    <div class="carousel-section__header">
+      <div class="carousel-section__frame">
+        <h3 class="carousel-section__title">{{ data.title }}</h3>
+        <div class="carousel-section__link-container">
+          <a href="href">{{ data.linkLabel }}</a>
+        </div>
+      </div>
+
+      <p class="carousel-section__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa recusandae
+        commodi cum totam dolore nihil quam. Numquam maiores similique id quia,
+        dolorum, ab suscipit ipsam corporis ipsa aut recusandae consequuntur!
+      </p>
+
+      <ng-content #specialTitle class="carousel-section__special-title">
+      </ng-content>
+    </div>
+
+    <!-- Carousel  -->
+    <ngx-slick-carousel class="carousel" [config]="eventsConfig">
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <app-event-card [event]="slide"></app-event-card>
+      </div>
+    </ngx-slick-carousel>
+  </div>
+</section>

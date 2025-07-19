@@ -1,0 +1,116 @@
+.newsletter {
+  background-color: #dfe3e8;
+  position: relative;
+  padding: 60px 200px 40px 200px;
+  min-height: 52vh;
+}
+
+// .newsletter:after {
+//   content: "";
+//   background-image: url(/wp-content/uploads/2025/06/bg.png);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   opacity: 35%;
+// }
+
+.newsletter-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.newsletter__left {
+  max-width: 45%;
+}
+
+.newsletter__left h2 {
+  color: #2d4b71;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletter__left h3 {
+  font-weight: 300;
+  color: #37424c;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletter__left p {
+  color: #37424c;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+}
+
+.newsletter .container-fluid {
+  position: relative;
+  z-index: 9;
+}
+
+.newsletter__right {
+  position: relative;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  margin-right: 1rem;
+}
+.form-group :first-child {
+  min-width: 300px !important;
+  outline: none;
+}
+
+// .newsletter__right form .wpcf7-spinner {
+//   position: absolute;
+//   right: 5px;
+//   top: 8px;
+//   margin: 0;
+// }
+
+// .newsletter__right form {
+// }
+
+.form-submit {
+  height: 38px;
+  border-radius: 5px;
+  padding: 6px 1rem 6px 3rem !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Capa_2' data-name='Capa 2' viewBox='0 0 11.36 11.36'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23ffc325%3B %7D %3C/style%3E%3C/defs%3E%3Cg id='Capa_24' data-name='Capa 24'%3E%3Cpath class='cls-1' d='M11.13.24c-.21-.21-.51-.29-.79-.21h0L.59 2.99c-.43.12-.68.57-.56 1 .06.22.22.41.43.51l4.31 2.1 2.1 4.31c.13.28.42.46.73.46.02 0 .05 0 .07 0 .34-.03.62-.26.71-.58L11.33 1.04h0c.08-.29 0-.59-.2-.8ZM7.6 10.55h0s0 0 0 0l-2.03-4.18 2.44-2.44c.15-.16.15-.42-.01-.57-.16-.15-.4-.15-.56 0l-2.44 2.44L.82 3.77h0 0L10.55.81l-2.95 9.73Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: 15px 50%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.newsletter__right form input[type="email"] {
+  height: 100%;
+  padding: 10px 1rem 10px 1rem !important;
+  background-color: rgb(191 199 209 / 50%);
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.newsletter__right form input[type="email"]::placeholder {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletter__right form input {
+}
+
+.newsletter__right form p {
+  display: flex;
+}
+
+.newsletter__right form .wpcf7-response-output {
+  background-color: rgb(255 255 255 / 80%);
+}

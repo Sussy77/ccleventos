@@ -1,37 +1,29 @@
-<section class="newsletter py-5 m-80">
-  <div class="container-fluid py-xl-5">
-    <div class="row align-items-center mb-xl-5 pb-xl-5">
-      <div class="col-12 col-xl-6 newsletter__left mb-4 mb-xl-0">
-        <h2 class="mb-3">Mantente al día</h2>
-        <h3 class="mb-4 pb-xl-2">
-          Descubre las últimas novedades en servicios,<br />
-          capacitaciones y eventos de la CCL.
-        </h3>
-        <p>Regístrate para recibir la agenda</p>
-      </div>
-      <div class="col-12 col-xl-6 newsletter__right">
-        <form (ngSubmit)="subscribeToNewsletter()">
-          <p>
-            <span class="wpcf7-form-control-wrap" data-name="your-email">
-              <input
-                type="email"
-                placeholder="Ingresa tu correo"
-                [(ngModel)]="newsletterEmail"
-                name="newsletterEmail"
-                required
-              />
-            </span>
-            <input
-              class="wpcf7-form-control wpcf7-submit has-spinner"
-              type="submit"
-              value="Subscribirse"
-            />
-          </p>
-          <div *ngIf="subscriptionMessage" class="subscription-message">
-            {{ subscriptionMessage }}
-          </div>
-        </form>
-      </div>
+<section class="newsletter">
+  <div class="newsletter-container">
+    <div class="newsletter__left">
+      <h2 class="">Mantente al día</h2>
+      <h3 class="">
+        Descubre las últimas novedades en servicios, capacitaciones y eventos de
+        la CCL.
+      </h3>
+      <p>Regístrate para recibir la agenda</p>
+    </div>
+    <div class="newsletter__right">
+      <form (ngSubmit)="subscribeToNewsletter()">
+        <div class="form-group">
+          <input
+            type="email"
+            placeholder="Ingresa tu correo"
+            [(ngModel)]="newsletterEmail"
+            name="newsletterEmail"
+            required
+          />
+          <input class="form-submit" type="submit" value="Subscribirse" />
+        </div>
+        <div *ngIf="subscriptionMessage" class="subscription-message">
+          {{ subscriptionMessage }}
+        </div>
+      </form>
     </div>
   </div>
 </section>

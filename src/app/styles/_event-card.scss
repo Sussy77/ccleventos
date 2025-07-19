@@ -1,0 +1,27 @@
+.event-card {
+  border-radius: 8px;
+  position: relative;
+  overflow: visible;
+}
+.event-card-image {
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1000 !important;
+}
+.event-card:hover > .event-card__info {
+  transform: translateY(100%);
+  opacity: 1;
+}
+.event-card__info {
+  border-radius: 8px;
+  opacity: 0;
+  z-index: 450;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: white;
+  position: absolute;
+  box-shadow: 1px 4px 13px rgba(173, 169, 169, 0.687);
+  transition: all 250ms ease-in-out;
+}

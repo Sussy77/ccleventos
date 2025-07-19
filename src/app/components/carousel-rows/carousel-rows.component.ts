@@ -3,56 +3,39 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgFor, NgIf } from '@angular/common';
 import { EventService } from '../../services/event.service';
 import { EventCardComponent } from '../event-card/event-card.component';
+import { CarouselSectionComponent } from '../carousel-section/carousel-section.component';
 
 @Component({
   selector: 'app-carousel-rows',
-  imports: [SlickCarouselModule, EventCardComponent, NgIf, NgFor],
+  imports: [NgFor, CarouselSectionComponent],
   templateUrl: './carousel-rows.component.html',
   styleUrl: './carousel-rows.component.scss',
 })
 export class CarouselRowsComponent {
   events: any[] = []; // Array to store fetched events
-  slideConfig = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
 
-  eventosConfig = {
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: true,
-    dots: false,
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  sections = [
+    {
+      title: 'Eventos y Ferias',
+      linkLabel: 'Ver todos',
+      href: '/eventos-ferias',
+    },
+    {
+      title: 'Capacitación',
+      linkLabel: 'Ver todos',
+      href: '/capacitaciones',
+    },
+    {
+      title: 'Servicios',
+      linkLabel: 'Ver todos',
+      href: '/servicios',
+    },
+    {
+      title: 'Exclusivo para Asociados',
+      linkLabel: 'Ver todos',
+      href: '/asociados',
+    },
+  ];
 
   constructor(private eventService: EventService) {}
 
